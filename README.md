@@ -3,12 +3,18 @@
 SharePoint URL Decoder
 This Python script decodes URL-encoded SharePoint links, extracting the main URL and any encoded query parameters. It takes an encoded SharePoint URL as input from the user and returns a more readable format by decoding the percent-encoded characters.
 
-Features
-User Input: The script prompts the user to enter a SharePoint URL.
-URL Decoding: Extracts and decodes the base URL and any encoded query parameters.
-Human-readable output: Displays the decoded base URL and parameters in a readable format.
+**Features**
+
+**User Input:** The script prompts the user to enter a SharePoint URL.
+
+**URL Decoding: **Extracts and decodes the base URL and any encoded query parameters.
+
+**Human-readable output: **Displays the decoded base URL and parameters in a readable format.
+
+
 Prerequisites
-Python 3.x: This script is written in Python 3 and requires Python 3.x to run.
+
+**Python 3.x:** This script is written in Python 3 and requires Python 3.x to run.
 No additional libraries: The script uses Python's built-in urllib module, so no external dependencies are required.
 How to Use
 Clone the Repository:
@@ -25,7 +31,7 @@ python decode_sharepoint_url.py
 Input Example: When prompted, paste the encoded SharePoint URL. For example:
 
 bash
-Copy code
+
 Please enter the encoded SharePoint URL: https://cybersocafrica.sharepoint.com/sites/csoc_team/SiteAssets/CSOC%20Team%20Notebook/?newTargetListUrl=%2Fsites%2Fcsoc%5Fteam%2FSiteAssets%2FCSOC%20Team%20Notebook&id=%2Fsites%2Fcsoc%5Fteam%2FSiteAssets%2Fproject&viewid=8ea73e28%2D127d%2D45b3%2D8b88%2D1136773bc1
 Output Example: The script will output the base URL and the decoded parameters:
 
@@ -33,7 +39,7 @@ bash
 Copy code
 Base URL: https://cybersocafrica.sharepoint.com/sites/csoc_team/SiteAssets/CSOC Team Notebook/
 
-Decoded Query Parameters:
+**Decoded Query Parameters:**
 newTargetListUrl: /sites/csoc_team/SiteAssets/CSOC Team Notebook
 id: /sites/csoc_team/SiteAssets/project
 viewid: 8ea73e28-127d-45b3-8b88-1136773bc1
@@ -43,6 +49,8 @@ The script uses the urllib.parse module to:
 Split the URL into base URL and query parameters.
 Decode the percent-encoded parts of the URL such as %2F (which is /).
 Print the decoded URL and parameters in a clean, readable format.
+
+
 Key Functions:
 urlsplit(): Separates the base URL from the query parameters.
 parse_qs(): Parses the query parameters into a dictionary.
